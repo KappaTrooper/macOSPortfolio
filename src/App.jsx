@@ -1,10 +1,10 @@
-
+import Navbar from "#components/Navbar"
 
 const App = () => {
   return (
-<h1 className="text-3xl font-bold underline">
-  ajay
-</h1>
+<main>
+  <Navbar />
+</main>
   )
 }
 
