@@ -1,3 +1,4 @@
+import { navLinks } from "#constants"
 
 
 const Navbar = () => {
@@ -8,14 +9,10 @@ const Navbar = () => {
             <p className="font-bold"> Ajay's Portfolio</p>
 
             <ul>
-                {[
-                    {id: 1, name: "Portfolio" },
-                    {id: 1, name: "Contact" },
-                    {id: 1, name: "Project" },
-                ].map(({ id, name }) => (
+                {navLinks.map(({ id, name }) => (
                     <li key={id}>
                         <p>{name}</p>
-                    </li> 
+                    </li>  
                 
                 ))}
             </ul>
