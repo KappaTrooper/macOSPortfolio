@@ -97,6 +97,7 @@ const blogPosts = [
     link: "https://resumeajaysingh.netlify.app",
   },
 ];
+
 const techStack = [
   {
     category: "Frontend",
