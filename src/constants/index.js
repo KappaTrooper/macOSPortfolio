@@ -327,6 +327,7 @@ const WORK_LOCATION = {
   ],
 },
 
+
    // ▶ Project 3
 {
   id: 7,

@@ -1,13 +1,15 @@
-const { locations } = require("#constants");
-const { create } = require("zustand");
-const { immer } = require("zustand/middleware/immer");
+import { locations } from "#constants";
+import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 
-const DEFAULT_LOCATION = locations.works; 
+
+const DEFAULT_LOCATION = locations.work;
 
 const useLocationStore = create(immer((set) => ({
     activeLocation: DEFAULT_LOCATION,
 
-    setActiveLocation: (location = null) = set((state) => {
+    setActiveLocation: (location = null) => set((state) => {
+
         state.activeLocation = location;
     }),
 

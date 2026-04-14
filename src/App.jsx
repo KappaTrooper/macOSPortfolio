@@ -1,4 +1,4 @@
-import { Dock, Navbar, Welcome } from "#components";
+import { Dock, Finder, Navbar, Welcome } from "#components";
 import { Resume, Safari, Terminal } from "#windows";
 
 
@@ -16,6 +16,7 @@ const App = () => {
  <Terminal />
  <Safari/>
  <Resume/>
+ <Finder/>
 
 </main>
   )
