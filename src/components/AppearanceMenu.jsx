@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Laptop, Moon, Sun } from "lucide-react";
 import clsx from "clsx";
-import useThemeStore from "#store/theme";
+import useThemeStore, { WALLPAPERS } from "#store/theme";
 
 const OPTIONS = [
   { id: "light", label: "Light", icon: Sun },
@@ -12,6 +12,8 @@ const OPTIONS = [
 const AppearanceMenu = ({ open, onClose }) => {
   const mode = useThemeStore((state) => state.mode);
   const setMode = useThemeStore((state) => state.setMode);
+  const wallpaper = useThemeStore((state) => state.wallpaper);
+  const setWallpaper = useThemeStore((state) => state.setWallpaper);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -42,6 +44,24 @@ const AppearanceMenu = ({ open, onClose }) => {
           <span>{option.label}</span>
         </button>
       ))}
+
+      <div className="appearance-menu-divider" />
+
+      <div className="wallpaper-swatches">
+        {WALLPAPERS.map((wp) => (
+          <button
+            key={wp.id}
+            type="button"
+            className={clsx("wallpaper-swatch", wallpaper === wp.path && "active")}
+            style={{ backgroundImage: `url(${wp.path})` }}
+            aria-label={wp.label}
+            onClick={() => {
+              setWallpaper(wp.path);
+              onClose();
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ body {
   width: 100svw;
   overflow: hidden;
   height: 100svh;
-  background-image: url("/images/wallpaper.jpg");
+  background-image: var(--wallpaper-url, url("/images/wallpaper.jpg"));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -124,6 +124,22 @@ body {
     }
   }
 
+  .appearance-menu-divider {
+    @apply my-1.5 border-t border-border;
+  }
+
+  .wallpaper-swatches {
+    @apply flex gap-2 px-1.5 py-1;
+  }
+
+  .wallpaper-swatch {
+    @apply size-8 rounded-md bg-cover bg-center border-2 border-transparent cursor-pointer;
+
+    &.active {
+      @apply border-apple-blue;
+    }
+  }
+
   .window-shell {
     @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-full
            max-sm:!max-w-none max-sm:!translate-x-0 max-sm:!translate-y-0
@@ -227,8 +243,37 @@ body {
       @apply font-bold text-sm text-center w-full;
     }
 
+    .terminal-body {
+      @apply text-sm font-roboto p-5 flex flex-col h-96 max-h-[60vh];
+    }
+
+    .terminal-history {
+      @apply flex-1 overflow-y-auto space-y-2;
+
+      .intro {
+        @apply text-text-tertiary;
+      }
+    }
+
+    .terminal-input-row {
+      @apply flex items-center gap-1 pt-2;
+
+      input {
+        @apply bg-transparent outline-none text-text-primary;
+      }
+    }
+
+    .help,
+    .ls {
+      @apply space-y-1 py-1;
+
+      span {
+        @apply font-semibold text-[#00A154];
+      }
+    }
+
     .techstack {
-      @apply text-sm font-roboto p-5;
+      @apply text-sm font-roboto;
 
       .label {
         @apply flex items-center ms-10 mt-7;
@@ -394,6 +439,62 @@ body {
         }
       }
     }
+  }
+
+  .lightbox-overlay {
+    @apply fixed inset-0 z-[9999] bg-black/90 flex items-center justify-center;
+  }
+
+  .lightbox-image {
+    @apply max-w-[85vw] max-h-[85vh] object-contain rounded-lg;
+  }
+
+  .lightbox-close {
+    @apply absolute top-5 right-5 text-white/80 hover:text-white cursor-pointer;
+  }
+
+  .lightbox-nav {
+    @apply absolute top-1/2 -translate-y-1/2 text-white/80 hover:text-white cursor-pointer;
+  }
+
+  .lightbox-prev {
+    @apply left-5;
+  }
+
+  .lightbox-next {
+    @apply right-5;
+  }
+
+  .command-palette-overlay {
+    @apply fixed inset-0 z-[9999] bg-black/40 flex items-start justify-center pt-[15vh];
+  }
+
+  .command-palette {
+    @apply w-full max-w-lg mx-4 rounded-xl bg-surface-secondary/95 backdrop-blur-xl shadow-2xl border border-border overflow-hidden;
+  }
+
+  .command-palette-input {
+    @apply w-full px-4 py-3 bg-transparent text-text-primary placeholder:text-text-tertiary border-b border-border outline-none;
+  }
+
+  .command-palette-list {
+    @apply max-h-80 overflow-y-auto p-1.5;
+  }
+
+  .command-palette-item {
+    @apply flex items-center justify-between px-3 py-2 text-sm text-text-primary rounded-md cursor-pointer;
+
+    &.active {
+      @apply bg-surface-tertiary;
+    }
+  }
+
+  .command-palette-group {
+    @apply text-xs text-text-tertiary;
+  }
+
+  .command-palette-empty {
+    @apply px-3 py-6 text-center text-sm text-text-tertiary;
   }
 
   #resume {

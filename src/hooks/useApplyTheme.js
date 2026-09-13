@@ -5,6 +5,7 @@ const DARK_QUERY = '(prefers-color-scheme: dark)';
 
 const useApplyTheme = () => {
   const mode = useThemeStore((state) => state.mode);
+  const wallpaper = useThemeStore((state) => state.wallpaper);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -21,6 +22,10 @@ const useApplyTheme = () => {
     mql.addEventListener('change', handleChange);
     return () => mql.removeEventListener('change', handleChange);
   }, [mode]);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--wallpaper-url', `url("${wallpaper}")`);
+  }, [wallpaper]);
 };
 
 export default useApplyTheme;
