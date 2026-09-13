@@ -4,9 +4,9 @@
 
 html,
 body {
-  width: 100dvw;
+  width: 100svw;
   overflow: hidden;
-  height: 100dvh;
+  height: 100svh;
   background-image: url("/images/wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@ body {
 
 @layer base {
   main {
-    @apply w-dvw h-dvh overflow-hidden;
+    @apply w-svw h-svh overflow-hidden;
   }
 
   nav {
@@ -74,30 +74,30 @@ body {
   }
 
   #welcome {
-    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
-
-    .small-screen {
-      @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
-
-      p {
-        @apply flex-1 text-[16px] text-center font-roboto text-gray-400;
-      }
-    }
+    @apply text-gray-200 flex flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
   }
 
   .tooltip {
     @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
   }
 
+  .window-shell {
+    @apply max-sm:!fixed max-sm:!inset-0 max-sm:!w-full max-sm:!h-full
+           max-sm:!max-w-none max-sm:!translate-x-0 max-sm:!translate-y-0
+           max-sm:!rounded-none;
+  }
+
   #dock {
-    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
+    @apply fixed bottom-5 left-1/2 -translate-x-1/2 z-50 select-none
+           max-sm:bottom-[calc(1.25rem+env(safe-area-inset-bottom))] max-sm:w-[92vw];
 
     .dock-container {
-      @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
+      @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5
+             max-sm:w-full max-sm:justify-around max-sm:items-center max-sm:gap-3;
     }
 
     .dock-icon {
-      @apply size-14 3xl:size-20 cursor-pointer;
+      @apply size-14 3xl:size-20 cursor-pointer max-sm:size-11;
 
       img {
         @apply object-cover object-center;
@@ -107,6 +107,10 @@ body {
 
   #window-controls {
     @apply flex gap-2;
+
+    .control-hit {
+      @apply sm:contents max-sm:flex max-sm:items-center max-sm:justify-center max-sm:size-11;
+    }
 
     .close {
       @apply size-3.5 rounded-full bg-[#ff6157] cursor-pointer;
@@ -126,10 +130,10 @@ body {
   }
 
   #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:left-[5vw] max-xl:top-24;
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2 max-sm:w-full;
 
       input {
         @apply placeholder:text-gray-400;
@@ -144,14 +148,18 @@ body {
       }
 
       .blog-post {
-        @apply grid grid-cols-12 space-x-5;
+        @apply grid grid-cols-12 space-x-5 max-sm:!grid-cols-1 max-sm:!space-x-0 max-sm:gap-3;
 
         img {
           @apply size-full rounded-md object-cover;
         }
 
+        & > div:first-child {
+          @apply max-sm:!col-span-1 max-sm:w-24 max-sm:mx-auto;
+        }
+
         .content {
-          @apply col-span-10 space-y-3;
+          @apply col-span-10 space-y-3 max-sm:!col-span-1;
 
           p {
             @apply text-xs text-gray-500;
@@ -170,7 +178,7 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[85vw] max-xl:max-w-lg max-xl:left-[5vw] max-xl:top-20;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -187,6 +195,8 @@ body {
         @apply py-5 my-5 border-y border-dashed space-y-1;
 
         li {
+          @apply max-sm:flex-col max-sm:items-start max-sm:gap-1;
+
           .check {
             @apply text-[#00A154] w-5;
           }
@@ -196,7 +206,7 @@ body {
           }
 
           ul {
-            @apply flex items-center gap-3;
+            @apply flex items-center gap-3 max-sm:flex-wrap;
           }
         }
       }
@@ -216,7 +226,7 @@ body {
   }
 
   #contact {
-    @apply w-sm absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-sm absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[80vw] max-xl:max-w-sm max-xl:left-[5vw] max-xl:top-32;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -251,7 +261,7 @@ body {
     }
 
     .social-row {
-      @apply flex items-start justify-center gap-6 py-5;
+      @apply flex items-start justify-center gap-6 py-5 max-sm:gap-4;
     }
 
     .social-item {
@@ -276,18 +286,18 @@ body {
   }
 
   #photos {
-    @apply w-3xl absolute top-96 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-3xl absolute top-96 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:top-1/2;
 
     .sidebar {
-      @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
+      @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5 max-sm:w-16 max-sm:items-center max-sm:p-2;
 
       h2 {
-        @apply text-xs font-medium text-gray-400 mb-1;
+        @apply text-xs font-medium text-gray-400 mb-1 max-sm:hidden;
       }
 
       ul {
         li {
-          @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors;
+          @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors max-sm:justify-center max-sm:px-2;
 
           &.active {
             @apply bg-blue-100 text-blue-700;
@@ -302,20 +312,22 @@ body {
           }
 
           p {
-            @apply text-sm font-medium;
+            @apply text-sm font-medium max-sm:hidden;
           }
         }
       }
     }
 
     .gallery {
-      @apply p-5;
+      @apply p-5 max-sm:p-3;
 
       ul {
-        @apply grid grid-cols-5 grid-rows-5 gap-2.5 h-96;
+        @apply grid grid-cols-5 grid-rows-5 gap-2.5 h-96
+               max-sm:!grid-cols-1 max-sm:!grid-rows-none max-sm:!h-auto max-sm:gap-4;
 
         li {
-          @apply overflow-hidden;
+          @apply overflow-hidden max-sm:!col-span-1 max-sm:!row-span-1
+                 max-sm:!col-start-auto max-sm:!row-start-auto max-sm:aspect-[4/3];
 
           img {
             @apply size-full object-cover rounded-lg;
@@ -342,23 +354,27 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-[min(85vw,42rem)] h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:left-[7vw];
 
     #window-header {
       h2 {
         @apply font-bold text-sm text-center flex-1;
       }
     }
+
+    .resume-viewer {
+      @apply w-full max-h-[75vh] overflow-y-auto;
+    }
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl max-xl:w-[94vw] max-xl:max-w-3xl max-xl:left-[3vw] max-xl:top-12;
 
     .sidebar {
-      @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
+      @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3 max-xl:w-32 max-sm:w-16 max-sm:items-center max-sm:p-2;
 
       h3 {
-        @apply text-xs font-medium text-gray-400 mb-1;
+        @apply text-xs font-medium text-gray-400 mb-1 max-sm:hidden;
       }
 
       ul {
@@ -373,30 +389,36 @@ body {
         }
 
         li {
-          @apply flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors;
+          @apply flex items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors max-sm:justify-center max-sm:px-2;
+
+          p {
+            @apply max-sm:hidden;
+          }
         }
       }
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-white max-w-2xl relative max-xl:overflow-x-auto
+             max-sm:!max-w-none max-sm:grid max-sm:grid-cols-2 max-sm:gap-6
+             max-sm:content-start max-sm:overflow-y-auto max-sm:p-4;
 
       li {
-        @apply absolute flex items-center flex-col gap-3;
+        @apply absolute flex items-center flex-col gap-3 max-sm:!static;
 
         img {
           @apply object-contain object-center size-16 relative group-hover:scale-105;
         }
 
         p {
-          @apply text-sm text-center font-medium w-40;
+          @apply text-sm text-center font-medium w-40 max-sm:!w-full;
         }
       }
     }
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[80vw] max-xl:max-w-md max-xl:right-[5vw] max-xl:top-24;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -404,7 +426,7 @@ body {
   }
 
   #imgfile {
-    @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[85vw] max-xl:max-w-lg max-xl:left-[5vw] max-xl:top-28;
 
     #window-header {
       p {
