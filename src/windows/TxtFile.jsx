@@ -26,13 +26,13 @@ const TxtFile = () => {
         )}
 
         {(item?.description ?? []).map((line, index) => (
-          <p key={index} className="text-sm text-gray-700">
+          <p key={index} className="text-sm text-text-secondary">
             {line}
           </p>
         ))}
 
         {!item && (
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-text-tertiary">
             Open a .txt file from Finder to preview it here.
           </p>
         )}

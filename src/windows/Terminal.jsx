@@ -44,7 +44,7 @@ const Terminal = () => {
         <Check size={20} /> 5 of 5 stacks successfully (100%)
       </p>
 
-      <p className="text-black">
+      <p className="text-text-primary">
         Render time: 6ms
       </p>
 

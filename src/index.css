@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html,
 body {
   width: 100svw;
@@ -24,6 +26,35 @@ body {
   --color-apple-label-secondary: #6e6e73;
   --color-apple-gray-6: #f5f5f7;
   --color-apple-separator: #d2d2d7;
+
+  /* Theme-aware surface/text tokens (light mode values) */
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f9fafb;
+  --color-surface-tertiary: #e5e7eb;
+  --color-border: #e5e7eb;
+  --color-border-strong: #d1d5db;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+  --color-text-quaternary: #6b7280;
+}
+
+.dark {
+  --color-apple-label: #f5f5f7;
+  --color-apple-label-secondary: #98989d;
+  --color-apple-gray-6: #2c2c2e;
+  --color-apple-separator: #38383a;
+  --color-apple-blue: #0a84ff;
+
+  --color-surface: #1e1e1e;
+  --color-surface-secondary: #2c2c2e;
+  --color-surface-tertiary: #3a3a3c;
+  --color-border: #38383a;
+  --color-border-strong: #48484a;
+  --color-text-primary: #f5f5f7;
+  --color-text-secondary: #c7c7cc;
+  --color-text-tertiary: #98989d;
+  --color-text-quaternary: #8e8e93;
 }
 
 @utility flex-center {
@@ -44,7 +75,7 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex justify-between items-center bg-white/50 dark:bg-black/40 backdrop-blur-3xl p-2 px-5 select-none;
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -58,19 +89,19 @@ body {
       @apply flex items-center gap-5 max-sm:hidden;
 
       p {
-        @apply text-sm cursor-pointer hover:underline transition-all;
+        @apply text-sm cursor-pointer hover:underline transition-all text-text-primary;
       }
     }
 
     time {
-      @apply text-sm font-medium text-black;
+      @apply text-sm font-medium text-text-primary;
     }
   }
 }
 
 @layer components {
   .icon {
-    @apply p-1 hover:bg-gray-200 rounded hover:cursor-default;
+    @apply p-1 hover:bg-gray-200 dark:hover:bg-white/10 rounded hover:cursor-default text-text-primary;
   }
 
   #welcome {
@@ -78,7 +109,19 @@ body {
   }
 
   .tooltip {
-    @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
+    @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 dark:!bg-blue-500/30 !text-blue-900 dark:!text-blue-200 !shadow-2xl;
+  }
+
+  .appearance-menu {
+    @apply flex flex-col absolute top-full right-0 mt-2 w-36 p-1.5 rounded-xl bg-surface-secondary/95 backdrop-blur-xl shadow-2xl border border-border z-50;
+  }
+
+  .appearance-menu-item {
+    @apply flex items-center gap-2.5 w-full px-3 py-1.5 text-sm text-text-primary rounded-md hover:bg-surface-tertiary transition-colors cursor-pointer;
+
+    &.active {
+      @apply bg-surface-tertiary;
+    }
   }
 
   .window-shell {
@@ -92,7 +135,7 @@ body {
            max-sm:bottom-[calc(1.25rem+env(safe-area-inset-bottom))] max-sm:w-[92vw];
 
     .dock-container {
-      @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5
+      @apply bg-white/20 dark:bg-black/30 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5
              max-sm:w-full max-sm:justify-around max-sm:items-center max-sm:gap-3;
     }
 
@@ -126,22 +169,22 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-surface-secondary border-b border-border select-none text-sm text-text-tertiary;
   }
 
   #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:left-[5vw] max-xl:top-24;
+    @apply w-4xl absolute top-40 left-2/12 bg-surface text-text-primary shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:left-[5vw] max-xl:top-24;
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2 max-sm:w-full;
+      @apply flex items-center gap-3 w-2/3 bg-surface border border-border-strong rounded-lg px-3 py-2 max-sm:w-full;
 
       input {
-        @apply placeholder:text-gray-400;
+        @apply text-text-primary placeholder:text-text-tertiary;
       }
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+      @apply bg-surface p-10 max-w-3xl mx-auto;
 
       h2 {
         @apply text-xl font-bold text-pink-600 mb-10;
@@ -162,11 +205,11 @@ body {
           @apply col-span-10 space-y-3 max-sm:!col-span-1;
 
           p {
-            @apply text-xs text-gray-500;
+            @apply text-xs text-text-quaternary;
           }
 
           h3 {
-            @apply font-semibold text-base text-gray-800;
+            @apply font-semibold text-base text-text-primary;
           }
 
           a {
@@ -178,7 +221,7 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[85vw] max-xl:max-w-lg max-xl:left-[5vw] max-xl:top-20;
+    @apply w-xl absolute top-32 left-1/12 bg-surface text-text-primary shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[85vw] max-xl:max-w-lg max-xl:left-[5vw] max-xl:top-20;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -192,7 +235,7 @@ body {
       }
 
       .content {
-        @apply py-5 my-5 border-y border-dashed space-y-1;
+        @apply py-5 my-5 border-y border-border border-dashed space-y-1;
 
         li {
           @apply max-sm:flex-col max-sm:items-start max-sm:gap-1;
@@ -226,7 +269,7 @@ body {
   }
 
   #contact {
-    @apply w-sm absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[80vw] max-xl:max-w-sm max-xl:left-[5vw] max-xl:top-32;
+    @apply w-sm absolute top-60 left-5/12 bg-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[80vw] max-xl:max-w-sm max-xl:left-[5vw] max-xl:top-32;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -286,13 +329,13 @@ body {
   }
 
   #photos {
-    @apply w-3xl absolute top-96 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:top-1/2;
+    @apply w-3xl absolute top-96 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:top-1/2;
 
     .sidebar {
-      @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5 max-sm:w-16 max-sm:items-center max-sm:p-2;
+      @apply w-3/12 flex-none bg-surface-secondary border-r border-border flex flex-col p-5 max-sm:w-16 max-sm:items-center max-sm:p-2;
 
       h2 {
-        @apply text-xs font-medium text-gray-400 mb-1 max-sm:hidden;
+        @apply text-xs font-medium text-text-tertiary mb-1 max-sm:hidden;
       }
 
       ul {
@@ -300,11 +343,11 @@ body {
           @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors max-sm:justify-center max-sm:px-2;
 
           &.active {
-            @apply bg-blue-100 text-blue-700;
+            @apply bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300;
           }
 
           &.not-active {
-            @apply text-gray-700 hover:bg-gray-200;
+            @apply text-text-secondary hover:bg-surface-tertiary;
           }
 
           img {
@@ -354,7 +397,7 @@ body {
   }
 
   #resume {
-    @apply w-[min(85vw,42rem)] h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:left-[7vw];
+    @apply w-[min(85vw,42rem)] h-fit absolute top-16 left-7/12 bg-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:left-[7vw];
 
     #window-header {
       h2 {
@@ -371,21 +414,21 @@ body {
     @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl max-xl:w-[94vw] max-xl:max-w-3xl max-xl:left-[3vw] max-xl:top-12;
 
     .sidebar {
-      @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3 max-xl:w-32 max-sm:w-16 max-sm:items-center max-sm:p-2;
+      @apply w-48 bg-surface-secondary border-r border-border flex flex-col p-5 space-y-3 max-xl:w-32 max-sm:w-16 max-sm:items-center max-sm:p-2;
 
       h3 {
-        @apply text-xs font-medium text-gray-400 mb-1 max-sm:hidden;
+        @apply text-xs font-medium text-text-tertiary mb-1 max-sm:hidden;
       }
 
       ul {
         @apply space-y-1;
 
         .active {
-          @apply bg-blue-100 text-blue-700;
+          @apply bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300;
         }
 
         .not-active {
-          @apply text-gray-700 hover:bg-gray-200;
+          @apply text-text-secondary hover:bg-surface-tertiary;
         }
 
         li {
@@ -399,7 +442,7 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative max-xl:overflow-x-auto
+      @apply flex-1 p-8 bg-surface text-text-primary max-w-2xl relative max-xl:overflow-x-auto
              max-sm:!max-w-none max-sm:grid max-sm:grid-cols-2 max-sm:gap-6
              max-sm:content-start max-sm:overflow-y-auto max-sm:p-4;
 
@@ -418,7 +461,7 @@ body {
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[80vw] max-xl:max-w-md max-xl:right-[5vw] max-xl:top-24;
+    @apply w-md absolute top-36 right-32 bg-surface text-text-primary shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[80vw] max-xl:max-w-md max-xl:right-[5vw] max-xl:top-24;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -426,16 +469,16 @@ body {
   }
 
   #imgfile {
-    @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[85vw] max-xl:max-w-lg max-xl:left-[5vw] max-xl:top-28;
+    @apply w-xl absolute top-40 left-2/12 bg-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[85vw] max-xl:max-w-lg max-xl:left-[5vw] max-xl:top-28;
 
     #window-header {
       p {
-        @apply font-bold text-[#5f6266];
+        @apply font-bold text-[#5f6266] dark:text-text-tertiary;
       }
     }
 
     .preview {
-      @apply p-2 bg-gray-200 max-h-[70vh];
+      @apply p-2 bg-surface-tertiary max-h-[70vh];
 
       img {
         @apply w-full h-fit object-contain object-center;
