@@ -79,21 +79,21 @@ const blogPosts = [
     id: 1,
     date: "Jan 2026",
     title: "Migrating 130+ Landing Pages to WordPress",
-    image: "/images/blog1.png",
+    image: "/images/plain.png",
     link: "https://resumeajaysingh.netlify.app",
   },
   {
     id: 2,
     date: "Dec 2025",
     title: "Building Conversion-Focused Med Spa Websites",
-    image: "/images/blog1.png",
+    image: "/images/plain.png",
     link: "https://resumeajaysingh.netlify.app",
   },
   {
     id: 3,
     date: "Nov 2025",
     title: "How I Improved Lead Capture with UX Optimization",
-    image: "/images/blog1.png",
+    image: "/images/plain.png",
     link: "https://resumeajaysingh.netlify.app",
   },
 ];
@@ -130,28 +130,28 @@ const socials = [
     id: 1,
     text: "Github",
     icon: "/icons/github.svg",
-    bg: "#f4656b",
-    link: "",
+    bg: "#181717",
+    link: "https://github.com/KappaTrooper",
   },
   {
     id: 2,
-    text: "Platform",
+    text: "Blog",
     icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "",
+    bg: "#0d9488",
+    link: "http://blog.ajaysingh.ca/",
   },
   {
     id: 3,
-    text: "Twitter/X",
+    text: "X",
     icon: "/icons/twitter.svg",
-    bg: "#ff866b",
+    bg: "#9ca3af",
     link: "",
   },
   {
     id: 4,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
+    bg: "#0A66C2",
     link: "https://www.linkedin.com/in/singhajay/",
   },
 ];
@@ -187,19 +187,23 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/photos/chris-weiher-1eB0ldzkOwk-unsplash.jpg",
+    category: 2, // Memories
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/photos/josie-weiss-zc5XLXVVqK0-unsplash.jpg",
+    category: 3, // Places
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/images/photos/marek-piwnicki-z9sDDcQR7Sk-unsplash.jpg",
+    category: 4, // People
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/images/photos/the-metropolitan-museum-of-art-zJhx6sTyeuM-unsplash.jpg",
+    category: 5, // Favorites
   },
 ];
 
@@ -261,7 +265,7 @@ const WORK_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 right-80",
-      imageUrl: "/images/project-boomerangfx.png",
+      imageUrl: "/images/image.png",
     },
     {
       id: 4,
@@ -314,7 +318,7 @@ const WORK_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/project-perspective.png",
+      imageUrl: "/images/image.png",
     },
     {
       id: 4,
@@ -368,7 +372,7 @@ const WORK_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 right-80",
-      imageUrl: "/images/project-imagebucket.png",
+      imageUrl: "/images/image.png",
     },
     {
       id: 4,
@@ -397,7 +401,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/image.png",
     },
     {
       id: 2,
@@ -406,7 +410,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/image.png",
     },
     {
       id: 3,
@@ -415,7 +419,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/image.png",
     },
     {
   id: 4,
@@ -425,7 +429,7 @@ const ABOUT_LOCATION = {
   fileType: "txt",
   position: "top-60 left-5",
   subtitle: "About Ajay",
-  image: "/images/ajay.jpg",
+  image: "/images/image.png",
   description: [
     "Hi, I'm Ajay — a Front-End Web Developer focused on building conversion-driven websites and digital experiences.",
     "I have 5+ years of experience delivering websites and applications for healthcare, education, and small business clients.",
@@ -470,7 +474,7 @@ const TRASH_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: "/images/trash-1.png",
+      imageUrl: "/images/image.png",
     },
     {
       id: 2,
@@ -479,7 +483,7 @@ const TRASH_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: "/images/trash-2.png",
+      imageUrl: "/images/image.png",
     },
   ],
 };

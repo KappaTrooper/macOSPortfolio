@@ -1,5 +1,5 @@
 import { Dock, Finder, Navbar, Welcome } from "#components";
-import { Resume, Safari, Terminal } from "#windows";
+import { Contact, ImgFile, Photos, Resume, Safari, Terminal, TxtFile } from "#windows";
 
 
 import gsap from "gsap";
@@ -17,6 +17,10 @@ const App = () => {
  <Safari/>
  <Resume/>
  <Finder/>
+ <Contact/>
+ <Photos/>
+ <TxtFile/>
+ <ImgFile/>
 
 </main>
   )
