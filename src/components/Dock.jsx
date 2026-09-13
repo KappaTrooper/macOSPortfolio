@@ -7,6 +7,8 @@ import { Tooltip } from 'react-tooltip';
 import gsap from "gsap";
 import useWindowStore from "#store/window.js";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const Dock = () => {
     const {openWindow, closeWindow, windows } = useWindowStore();
   const dockRef = useRef(null);
@@ -80,7 +82,7 @@ const toggleApp = (app) => {
                      data-tooltip-delay-show={150}
                      disabled={!canOpen}
                      onClick={() => toggleApp({id, canOpen})}>
-                     <img src={`/images/${icon}`}
+                     <img src={`${BASE_URL}images/${icon}`}
                         alt={name}
                         loading="lazy"
                         className={canOpen ? `` : `opacity-60`}

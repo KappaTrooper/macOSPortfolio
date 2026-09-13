@@ -1,3 +1,5 @@
+const BASE_URL = import.meta.env.BASE_URL;
+
 const navLinks = [
   {
     id: 1,
@@ -19,19 +21,19 @@ const navLinks = [
 const navIcons = [
   {
     id: 1,
-    img: "/icons/wifi.svg",
+    img: `${BASE_URL}icons/wifi.svg`,
   },
   {
     id: 2,
-    img: "/icons/search.svg",
+    img: `${BASE_URL}icons/search.svg`,
   },
   {
     id: 3,
-    img: "/icons/user.svg",
+    img: `${BASE_URL}icons/user.svg`,
   },
   {
     id: 4,
-    img: "/icons/mode.svg",
+    img: `${BASE_URL}icons/mode.svg`,
     type: "mode",
   },
 ];
@@ -80,21 +82,21 @@ const blogPosts = [
     id: 1,
     date: "Jan 2026",
     title: "Migrating 130+ Landing Pages to WordPress",
-    image: "/images/plain.png",
+    image: `${BASE_URL}images/plain.png`,
     link: "https://resumeajaysingh.netlify.app",
   },
   {
     id: 2,
     date: "Dec 2025",
     title: "Building Conversion-Focused Med Spa Websites",
-    image: "/images/plain.png",
+    image: `${BASE_URL}images/plain.png`,
     link: "https://resumeajaysingh.netlify.app",
   },
   {
     id: 3,
     date: "Nov 2025",
     title: "How I Improved Lead Capture with UX Optimization",
-    image: "/images/plain.png",
+    image: `${BASE_URL}images/plain.png`,
     link: "https://resumeajaysingh.netlify.app",
   },
 ];
@@ -130,28 +132,28 @@ const socials = [
   {
     id: 1,
     text: "Github",
-    icon: "/icons/github.svg",
+    icon: `${BASE_URL}icons/github.svg`,
     bg: "#181717",
     link: "https://github.com/KappaTrooper",
   },
   {
     id: 2,
     text: "Blog",
-    icon: "/icons/atom.svg",
+    icon: `${BASE_URL}icons/atom.svg`,
     bg: "#0d9488",
     link: "http://blog.ajaysingh.ca/",
   },
   {
     id: 3,
     text: "X",
-    icon: "/icons/twitter.svg",
+    icon: `${BASE_URL}icons/twitter.svg`,
     bg: "#9ca3af",
     link: "",
   },
   {
     id: 4,
     text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
+    icon: `${BASE_URL}icons/linkedin.svg`,
     bg: "#0A66C2",
     link: "https://www.linkedin.com/in/singhajay/",
   },
@@ -160,27 +162,27 @@ const socials = [
 const photosLinks = [
   {
     id: 1,
-    icon: "/icons/gicon1.svg",
+    icon: `${BASE_URL}icons/gicon1.svg`,
     title: "Library",
   },
   {
     id: 2,
-    icon: "/icons/gicon2.svg",
+    icon: `${BASE_URL}icons/gicon2.svg`,
     title: "Memories",
   },
   {
     id: 3,
-    icon: "/icons/file.svg",
+    icon: `${BASE_URL}icons/file.svg`,
     title: "Places",
   },
   {
     id: 4,
-    icon: "/icons/gicon4.svg",
+    icon: `${BASE_URL}icons/gicon4.svg`,
     title: "People",
   },
   {
     id: 5,
-    icon: "/icons/gicon5.svg",
+    icon: `${BASE_URL}icons/gicon5.svg`,
     title: "Favorites",
   },
 ];
@@ -188,22 +190,22 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/photos/chris-weiher-1eB0ldzkOwk-unsplash.jpg",
+    img: `${BASE_URL}images/photos/chris-weiher-1eB0ldzkOwk-unsplash.jpg`,
     category: 2, // Memories
   },
   {
     id: 2,
-    img: "/images/photos/josie-weiss-zc5XLXVVqK0-unsplash.jpg",
+    img: `${BASE_URL}images/photos/josie-weiss-zc5XLXVVqK0-unsplash.jpg`,
     category: 3, // Places
   },
   {
     id: 3,
-    img: "/images/photos/marek-piwnicki-z9sDDcQR7Sk-unsplash.jpg",
+    img: `${BASE_URL}images/photos/marek-piwnicki-z9sDDcQR7Sk-unsplash.jpg`,
     category: 4, // People
   },
   {
     id: 4,
-    img: "/images/photos/the-metropolitan-museum-of-art-zJhx6sTyeuM-unsplash.jpg",
+    img: `${BASE_URL}images/photos/the-metropolitan-museum-of-art-zJhx6sTyeuM-unsplash.jpg`,
     category: 5, // Favorites
   },
 ];
@@ -223,14 +225,14 @@ const WORK_LOCATION = {
   id: 1,
   type: "work",
   name: "Work",
-  icon: "/icons/work.svg",
+  icon: `${BASE_URL}icons/work.svg`,
   kind: "folder",
   children: [
     // ▶ Project 1
   {
   id: 1,
   name: "BoomerangFX Platform",
-  icon: "/images/folder.png",
+  icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
   position: "top-10 left-5", // icon position inside Finder
   windowPosition: "top-[5vh] left-5", // Finder window position
@@ -238,7 +240,7 @@ const WORK_LOCATION = {
     {
       id: 5,
       name: "BoomerangFX Project.txt",
-      icon: "/images/txt.png",
+      icon: `${BASE_URL}images/txt.png`,
       kind: "file",
       fileType: "txt",
       position: "top-5 left-10",
@@ -253,7 +255,7 @@ const WORK_LOCATION = {
     {
       id: 2,
       name: "boomerangfx.com",
-      icon: "/images/safari.png",
+      icon: `${BASE_URL}images/safari.png`,
       kind: "file",
       fileType: "url",
       href: "https://boomerangfx.com",
@@ -262,16 +264,16 @@ const WORK_LOCATION = {
     {
       id: 3,
       name: "boomerangfx.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-52 right-80",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
     {
       id: 4,
       name: "Landing Pages.pdf",
-      icon: "/images/pdf.png",
+      icon: `${BASE_URL}images/pdf.png`,
       kind: "file",
       fileType: "pdf",
       position: "top-60 right-20",
@@ -283,7 +285,7 @@ const WORK_LOCATION = {
 {
   id: 6,
   name: "Perspective Health Website",
-  icon: "/images/folder.png",
+  icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
   position: "top-52 right-80",
   windowPosition: "top-[20vh] left-7",
@@ -291,7 +293,7 @@ const WORK_LOCATION = {
     {
       id: 1,
       name: "Overview.txt",
-      icon: "/images/txt.png",
+      icon: `${BASE_URL}images/txt.png`,
       kind: "file",
       fileType: "txt",
       position: "top-5 right-10",
@@ -306,7 +308,7 @@ const WORK_LOCATION = {
     {
       id: 2,
       name: "perspectivehealth.com",
-      icon: "/images/safari.png",
+      icon: `${BASE_URL}images/safari.png`,
       kind: "file",
       fileType: "url",
       href: "https://perspectivehealth.com",
@@ -315,16 +317,16 @@ const WORK_LOCATION = {
     {
       id: 3,
       name: "perspective-health.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
     {
       id: 4,
       name: "Service Pages.pdf",
-      icon: "/images/pdf.png",
+      icon: `${BASE_URL}images/pdf.png`,
       kind: "file",
       fileType: "pdf",
       position: "top-60 left-5",
@@ -337,7 +339,7 @@ const WORK_LOCATION = {
 {
   id: 7,
   name: "ImageBucket Application",
-  icon: "/images/folder.png",
+  icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
   position: "top-10 left-80",
   windowPosition: "top-[33vh] left-7",
@@ -345,7 +347,7 @@ const WORK_LOCATION = {
     {
       id: 1,
       name: "Overview.txt",
-      icon: "/images/txt.png",
+      icon: `${BASE_URL}images/txt.png`,
       kind: "file",
       fileType: "txt",
       position: "top-5 left-10",
@@ -360,7 +362,7 @@ const WORK_LOCATION = {
     {
       id: 2,
       name: "Github Repository.url",
-      icon: "/images/safari.png",
+      icon: `${BASE_URL}images/safari.png`,
       kind: "file",
       fileType: "url",
       href: "https://github.com/YOURUSERNAME/imagebucket",
@@ -369,16 +371,16 @@ const WORK_LOCATION = {
     {
       id: 3,
       name: "imagebucket.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-52 right-80",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
     {
       id: 4,
       name: "Architecture.pdf",
-      icon: "/images/pdf.png",
+      icon: `${BASE_URL}images/pdf.png`,
       kind: "file",
       fileType: "pdf",
       position: "top-60 right-20",
@@ -392,45 +394,45 @@ const ABOUT_LOCATION = {
   id: 2,
   type: "about",
   name: "About me",
-  icon: "/icons/info.svg",
+  icon: `${BASE_URL}icons/info.svg`,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "me.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
     {
       id: 2,
       name: "casual-me.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
     {
       id: 3,
       name: "conference-me.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
     {
   id: 4,
   name: "about-me.txt",
-  icon: "/images/txt.png",
+  icon: `${BASE_URL}images/txt.png`,
   kind: "file",
   fileType: "txt",
   position: "top-60 left-5",
   subtitle: "About Ajay",
-  image: "/images/image.png",
+  image: `${BASE_URL}images/image.png`,
   description: [
     "Hi, I'm Ajay — a Front-End Web Developer focused on building conversion-driven websites and digital experiences.",
     "I have 5+ years of experience delivering websites and applications for healthcare, education, and small business clients.",
@@ -446,13 +448,13 @@ const RESUME_LOCATION = {
   id: 3,
   type: "resume",
   name: "Resume",
-  icon: "/icons/file.svg",
+  icon: `${BASE_URL}icons/file.svg`,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "Resume.pdf",
-      icon: "/images/pdf.png",
+      icon: `${BASE_URL}images/pdf.png`,
       kind: "file",
       fileType: "pdf",
       // you can add `href` if you want to open a hosted resume
@@ -465,26 +467,26 @@ const TRASH_LOCATION = {
   id: 4,
   type: "trash",
   name: "Trash",
-  icon: "/icons/trash.svg",
+  icon: `${BASE_URL}icons/trash.svg`,
   kind: "folder",
   children: [
     {
       id: 1,
       name: "trash1.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-10 left-10",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
     {
       id: 2,
       name: "trash2.png",
-      icon: "/images/image.png",
+      icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
       position: "top-40 left-80",
-      imageUrl: "/images/image.png",
+      imageUrl: `${BASE_URL}images/image.png`,
     },
   ],
 };

@@ -5,7 +5,7 @@ import { navIcons, navLinks } from "#constants"
 import useWindowStore from "#store/window";
 import AppearanceMenu from "./AppearanceMenu";
 
-
+const BASE_URL = import.meta.env.BASE_URL;
 
 const Navbar = () => {
 
@@ -16,7 +16,7 @@ const [appearanceOpen, setAppearanceOpen] = useState(false);
   return (
     <nav>
         <div>
-            <img src="/images/logo.svg" alt="logo" className="dark:invert"/>
+            <img src={`${BASE_URL}images/logo.svg`} alt="logo" className="dark:invert"/>
             <p className="font-bold text-text-primary"> Ajays's Portfolio</p>
 
             <ul>

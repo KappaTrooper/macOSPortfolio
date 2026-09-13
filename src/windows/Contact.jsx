@@ -4,6 +4,8 @@ import WindowWrapper from "#hoc/WindowWrapper";
 import clsx from "clsx";
 import { Tooltip } from "react-tooltip";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const Contact = () => {
   return (
     <>
@@ -14,7 +16,7 @@ const Contact = () => {
 
       <div className="profile">
         <div className="avatar">
-          <img src="/icons/user.svg" alt="Ajay Singh" />
+          <img src={`${BASE_URL}icons/user.svg`} alt="Ajay Singh" />
         </div>
 
         <h3>Ajay Singh</h3>

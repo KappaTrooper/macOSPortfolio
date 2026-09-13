@@ -9,7 +9,7 @@ body {
   width: 100svw;
   overflow: hidden;
   height: 100svh;
-  background-image: var(--wallpaper-url, url("/images/wallpaper.jpg"));
+  background-image: var(--wallpaper-url);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
