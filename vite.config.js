@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 
 
 export default defineConfig({
-  base: '/macOSPortfolio/',
+  base: '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
