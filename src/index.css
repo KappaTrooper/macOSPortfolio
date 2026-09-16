@@ -543,19 +543,19 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-surface text-text-primary max-w-2xl relative max-xl:overflow-x-auto
-             max-sm:!max-w-none max-sm:grid max-sm:grid-cols-2 max-sm:gap-6
-             max-sm:content-start max-sm:overflow-y-auto max-sm:p-4;
+      @apply flex-1 p-8 bg-surface text-text-primary max-w-2xl grid content-start
+             gap-x-6 gap-y-8 grid-cols-4 max-h-96 overflow-y-auto
+             max-xl:grid-cols-3 max-sm:!max-w-none max-sm:!grid-cols-2 max-sm:gap-6 max-sm:p-4;
 
       li {
-        @apply absolute flex items-center flex-col gap-3 max-sm:!static;
+        @apply flex items-center flex-col gap-3;
 
         img {
           @apply object-contain object-center size-16 relative group-hover:scale-105;
         }
 
         p {
-          @apply text-sm text-center font-medium w-40 max-sm:!w-full;
+          @apply text-sm text-center font-medium w-full;
         }
       }
     }

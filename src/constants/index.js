@@ -234,7 +234,6 @@ const WORK_LOCATION = {
   name: "BoomerangFX Platform",
   icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
-  position: "top-10 left-5", // icon position inside Finder
   windowPosition: "top-[5vh] left-5", // Finder window position
   children: [
     {
@@ -243,7 +242,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/txt.png`,
       kind: "file",
       fileType: "txt",
-      position: "top-5 left-10",
       description: [
         "BoomerangFX is a platform that provides websites, marketing tools, and automation systems for medical clinics.",
         "I led the development and maintenance of dozens of clinic websites and landing pages used across North America.",
@@ -259,7 +257,6 @@ const WORK_LOCATION = {
       kind: "file",
       fileType: "url",
       href: "https://boomerangfx.com",
-      position: "top-10 right-20",
     },
     {
       id: 3,
@@ -267,7 +264,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-52 right-80",
       imageUrl: `${BASE_URL}images/image.png`,
     },
     {
@@ -276,7 +272,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/pdf.png`,
       kind: "file",
       fileType: "pdf",
-      position: "top-60 right-20",
     },
   ],
 },
@@ -287,7 +282,6 @@ const WORK_LOCATION = {
   name: "Perspective Health Website",
   icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
-  position: "top-52 right-80",
   windowPosition: "top-[20vh] left-7",
   children: [
     {
@@ -296,7 +290,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/txt.png`,
       kind: "file",
       fileType: "txt",
-      position: "top-5 right-10",
       description: [
         "Perspective Health is a wellness and medical aesthetics clinic website designed to educate patients and generate qualified leads.",
         "I designed and developed structured service pages optimized for SEO and online booking conversions.",
@@ -312,7 +305,6 @@ const WORK_LOCATION = {
       kind: "file",
       fileType: "url",
       href: "https://perspectivehealth.com",
-      position: "top-20 left-20",
     },
     {
       id: 3,
@@ -320,7 +312,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-52 left-80",
       imageUrl: `${BASE_URL}images/image.png`,
     },
     {
@@ -329,7 +320,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/pdf.png`,
       kind: "file",
       fileType: "pdf",
-      position: "top-60 left-5",
     },
   ],
 },
@@ -341,7 +331,6 @@ const WORK_LOCATION = {
   name: "ImageBucket Application",
   icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
-  position: "top-10 left-80",
   windowPosition: "top-[33vh] left-7",
   children: [
     {
@@ -350,7 +339,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/txt.png`,
       kind: "file",
       fileType: "txt",
-      position: "top-5 left-10",
       description: [
         "ImageBucket is a full-stack web application for uploading and exploring visual content.",
         "Users can upload images, browse galleries, and interact with a dynamic interface.",
@@ -366,7 +354,6 @@ const WORK_LOCATION = {
       kind: "file",
       fileType: "url",
       href: "https://github.com/YOURUSERNAME/imagebucket",
-      position: "top-10 right-20",
     },
     {
       id: 3,
@@ -374,7 +361,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-52 right-80",
       imageUrl: `${BASE_URL}images/image.png`,
     },
     {
@@ -383,7 +369,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/pdf.png`,
       kind: "file",
       fileType: "pdf",
-      position: "top-60 right-20",
     },
   ],
 },
@@ -394,7 +379,6 @@ const WORK_LOCATION = {
   name: "Prism",
   icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
-  position: "top-52 right-20",
   windowPosition: "top-[46vh] left-7",
   children: [
     {
@@ -403,7 +387,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/txt.png`,
       kind: "file",
       fileType: "txt",
-      position: "top-5 left-10",
       description: [
         "Prism is a Chrome extension that extracts a webpage's design system — colors, typography, spacing, and more — directly in the browser.",
         "Runs entirely client-side, so nothing about the page being inspected is ever sent off-device.",
@@ -419,7 +402,6 @@ const WORK_LOCATION = {
       kind: "file",
       fileType: "url",
       href: "https://chromewebstore.google.com/detail/prism/epjelpcaaajbkgbincimaikiideeafki",
-      position: "top-10 right-20",
     },
     {
       id: 3,
@@ -427,7 +409,6 @@ const WORK_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-52 right-80",
       imageUrl: `${BASE_URL}images/image.png`,
     },
   ],
@@ -448,7 +429,6 @@ const ABOUT_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-10 left-5",
       imageUrl: `${BASE_URL}images/image.png`,
     },
     {
@@ -457,7 +437,6 @@ const ABOUT_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-28 right-72",
       imageUrl: `${BASE_URL}images/image.png`,
     },
     {
@@ -466,7 +445,6 @@ const ABOUT_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-52 left-80",
       imageUrl: `${BASE_URL}images/image.png`,
     },
     {
@@ -475,7 +453,6 @@ const ABOUT_LOCATION = {
   icon: `${BASE_URL}images/txt.png`,
   kind: "file",
   fileType: "txt",
-  position: "top-60 left-5",
   subtitle: "About Ajay",
   image: `${BASE_URL}images/image.png`,
   description: [
@@ -521,7 +498,6 @@ const TRASH_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-10 left-10",
       imageUrl: `${BASE_URL}images/image.png`,
     },
     {
@@ -530,7 +506,6 @@ const TRASH_LOCATION = {
       icon: `${BASE_URL}images/image.png`,
       kind: "file",
       fileType: "img",
-      position: "top-40 left-80",
       imageUrl: `${BASE_URL}images/image.png`,
     },
   ],
