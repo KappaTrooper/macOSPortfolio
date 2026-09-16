@@ -388,6 +388,279 @@ const WORK_LOCATION = {
     },
   ],
 },
+
+// ▶ Project 5
+{
+  id: 9,
+  name: "Belle Jeunesse",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  windowPosition: "top-[5vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      description: [
+        "Designed and developed the website for Belle Jeunesse, a medical aesthetics clinic in Ladera Ranch, CA.",
+        "The site covers body sculpting, facial rejuvenation, and skin treatments across 20+ service pages.",
+        "Built with an integrated booking system and an e-commerce skincare shop.",
+      ],
+    },
+    {
+      id: 2,
+      name: "belle-jeunesse.com",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://belle-jeunesse.com/",
+    },
+    {
+      id: 3,
+      name: "belle-jeunesse.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
+
+// ▶ Project 6
+{
+  id: 10,
+  name: "Glamour MD",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  windowPosition: "top-[20vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      description: [
+        "Designed and developed the website for Glamour MD, a medical aesthetics and dermatology clinic in Toronto.",
+        "Covers laser treatments, injectables, and dermatology consultations across ten treatment categories.",
+        "Built with an integrated online booking system and a first-visit discount promotion.",
+      ],
+    },
+    {
+      id: 2,
+      name: "glamourmd.com",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://glamourmd.com/",
+    },
+    {
+      id: 3,
+      name: "glamourmd.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
+
+// ▶ Project 7
+{
+  id: 11,
+  name: "ReEnvision Eye Care",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  windowPosition: "top-[33vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      description: [
+        "Designed and developed the website for ReEnvision Eye Care, an ophthalmology practice in Buffalo Grove, IL.",
+        "Covers treatment for cataracts, glaucoma, macular degeneration, and dry eye disease.",
+        "Built with online appointment booking, a secure patient portal, and live chat support.",
+      ],
+    },
+    {
+      id: 2,
+      name: "reenvisioneyecare.com",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://reenvisioneyecare.com/",
+    },
+    {
+      id: 3,
+      name: "reenvisioneyecare.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
+
+// ▶ Project 8
+{
+  id: 12,
+  name: "Skin6",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  windowPosition: "top-[46vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      description: [
+        "Designed and developed the website for Skin6, a medical spa in Toronto founded by Jeremy Tebbutt.",
+        "Covers face, body, and hair treatments alongside the SkinCeuticals product line.",
+        "Built with integrated booking and dedicated pages for each treatment category.",
+      ],
+    },
+    {
+      id: 2,
+      name: "skin6.com",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://www.skin6.com/",
+    },
+    {
+      id: 3,
+      name: "skin6.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
+
+// ▶ Project 9
+{
+  id: 13,
+  name: "BelleBeauté MedSpa",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  windowPosition: "top-[5vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      description: [
+        "Designed and developed the website for BelleBeauté MedSpa, a luxury wellness and aesthetics clinic in Markham.",
+        "Covers injectables, laser treatments, facials, IV therapy, and a physician-led weight loss program.",
+        "Built with online booking, a before/after results gallery, and client review highlights.",
+      ],
+    },
+    {
+      id: 2,
+      name: "bellebeautemedspa.com",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://bellebeautemedspa.com/",
+    },
+    {
+      id: 3,
+      name: "bellebeautemedspa.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
+
+// ▶ Project 10
+{
+  id: 14,
+  name: "Jerome Dwight",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  windowPosition: "top-[20vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      description: [
+        "Built and designed the official website for Jerome Dwight, an entrepreneur and leader of the ChallengerX movement.",
+        "Showcases the ChallengerX podcast, his upcoming book The Challenger Mindset, and speaking engagements.",
+        "Includes an embedded podcast player, newsletter signup, and event RSVP for the book launch.",
+      ],
+    },
+    {
+      id: 2,
+      name: "jeromedwight.com",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://jeromedwight.com/",
+    },
+    {
+      id: 3,
+      name: "jeromedwight.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
+
+// ▶ Project 11
+{
+  id: 15,
+  name: "Challenger X",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  windowPosition: "top-[33vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      description: [
+        "Managing and growing the Challenger X podcast's YouTube channel, hosted by Jerome Dwight.",
+        "The podcast spotlights disruptors and innovators shaping the future of business.",
+        "Currently working to scale the channel toward 300K subscribers.",
+      ],
+    },
+    {
+      id: 2,
+      name: "YouTube Channel.url",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://www.youtube.com/@jeromedwightx",
+    },
+    {
+      id: 3,
+      name: "challengerx.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
   ],
 };
 
