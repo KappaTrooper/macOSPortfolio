@@ -218,35 +218,15 @@ body {
     .blog {
       @apply bg-surface p-10 max-w-3xl mx-auto;
 
-      h2 {
-        @apply text-xl font-bold text-pink-600 mb-10;
-      }
+      .coming-soon {
+        @apply flex flex-col items-center text-center gap-3 text-text-tertiary py-20;
 
-      .blog-post {
-        @apply grid grid-cols-12 space-x-5 max-sm:!grid-cols-1 max-sm:!space-x-0 max-sm:gap-3;
-
-        img {
-          @apply size-full rounded-md object-cover;
+        h2 {
+          @apply text-xl font-bold text-text-primary;
         }
 
-        & > div:first-child {
-          @apply max-sm:!col-span-1 max-sm:w-24 max-sm:mx-auto;
-        }
-
-        .content {
-          @apply col-span-10 space-y-3 max-sm:!col-span-1;
-
-          p {
-            @apply text-xs text-text-quaternary;
-          }
-
-          h3 {
-            @apply font-semibold text-base text-text-primary;
-          }
-
-          a {
-            @apply text-blue-600 text-xs hover:underline flex items-center gap-3;
-          }
+        p {
+          @apply text-sm;
         }
       }
     }

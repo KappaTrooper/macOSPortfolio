@@ -1,7 +1,6 @@
 import { WindowControls } from "#components"
-import { blogPosts } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper"
-import { ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Share, Shield, ShieldHalf } from "lucide-react";
+import { ChevronLeft, ChevronRight, Copy, Newspaper, PanelLeft, Plus, Search, Share, ShieldHalf } from "lucide-react";
 
 
 const Safari = () => {
@@ -33,21 +32,11 @@ const Safari = () => {
        
     </div>
      <div className="blog">
-            <h2>My Blog Posts</h2>
-            {blogPosts.map(({id, image, title, date, link}) => (
-                <div key={id} className="blog-post mb-8 last:mb-0">
-                    <div className="col-span-2">
-                        <img src={image} alt={title}/>
-                    </div>
-
-                    <div className="content">
-                    <p>{date}</p>
-                    <h3>{title}</h3>
-                    <a href={link} target="_blank" rel="noopener noreferrer"> Check out the full post <MoveRight className="icon-hover"/></a>
-
-                    </div>
-                </div>
-            ))}
+            <div className="coming-soon">
+                <Newspaper size={40} />
+                <h2>Coming Soon</h2>
+                <p>I'm working on some posts — check back soon!</p>
+            </div>
         </div>
   </>
 }

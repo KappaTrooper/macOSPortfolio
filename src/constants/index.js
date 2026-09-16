@@ -77,30 +77,6 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
-  {
-    id: 1,
-    date: "Jan 2026",
-    title: "Migrating 130+ Landing Pages to WordPress",
-    image: `${BASE_URL}images/plain.png`,
-    link: "https://resumeajaysingh.netlify.app",
-  },
-  {
-    id: 2,
-    date: "Dec 2025",
-    title: "Building Conversion-Focused Med Spa Websites",
-    image: `${BASE_URL}images/plain.png`,
-    link: "https://resumeajaysingh.netlify.app",
-  },
-  {
-    id: 3,
-    date: "Nov 2025",
-    title: "How I Improved Lead Capture with UX Optimization",
-    image: `${BASE_URL}images/plain.png`,
-    link: "https://resumeajaysingh.netlify.app",
-  },
-];
-
 const techStack = [
   {
     category: "Frontend",
@@ -214,7 +190,6 @@ export {
   navLinks,
   navIcons,
   dockApps,
-  blogPosts,
   techStack,
   socials,
   photosLinks,
