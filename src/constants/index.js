@@ -394,7 +394,7 @@ const WORK_LOCATION = {
   name: "Prism",
   icon: `${BASE_URL}images/folder.png`,
   kind: "folder",
-  position: "top-96 left-5",
+  position: "top-52 right-20",
   windowPosition: "top-[46vh] left-7",
   children: [
     {
