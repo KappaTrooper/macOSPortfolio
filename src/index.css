@@ -94,7 +94,7 @@ body {
     }
 
     .resume-link {
-      @apply text-sm cursor-pointer hover:underline transition-all text-text-primary shrink-0;
+      @apply text-sm cursor-pointer hover:underline transition-all text-text-primary shrink-0 max-sm:hidden;
     }
 
     time {
@@ -110,6 +110,18 @@ body {
 
   #welcome {
     @apply text-gray-200 flex flex-col justify-center items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+  }
+
+  .desktop-icon {
+    @apply hidden max-sm:flex flex-col items-center gap-2 absolute top-16 left-4 w-20 cursor-pointer;
+
+    img {
+      @apply size-12 object-contain;
+    }
+
+    p {
+      @apply text-xs text-gray-200 text-center drop-shadow-md;
+    }
   }
 
   .tooltip {
