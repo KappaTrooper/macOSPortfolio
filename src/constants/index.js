@@ -387,6 +387,51 @@ const WORK_LOCATION = {
     },
   ],
 },
+
+// ▶ Project 4
+{
+  id: 8,
+  name: "Prism",
+  icon: `${BASE_URL}images/folder.png`,
+  kind: "folder",
+  position: "top-96 left-5",
+  windowPosition: "top-[46vh] left-7",
+  children: [
+    {
+      id: 1,
+      name: "Overview.txt",
+      icon: `${BASE_URL}images/txt.png`,
+      kind: "file",
+      fileType: "txt",
+      position: "top-5 left-10",
+      description: [
+        "Prism is a Chrome extension that extracts a webpage's design system — colors, typography, spacing, and more — directly in the browser.",
+        "Runs entirely client-side, so nothing about the page being inspected is ever sent off-device.",
+        "Includes four color modes, an eyedropper, and a built-in WCAG contrast checker, alongside typography analysis by HTML element.",
+        "Extracts CSS custom properties, border-radius values, shadows, and spacing scales, and catalogs every image with alt-text auditing and batch downloads.",
+        "Launched recently on the Chrome Web Store and already used by almost 100 people."
+      ],
+    },
+    {
+      id: 2,
+      name: "Chrome Web Store.url",
+      icon: `${BASE_URL}images/safari.png`,
+      kind: "file",
+      fileType: "url",
+      href: "https://chromewebstore.google.com/detail/prism/epjelpcaaajbkgbincimaikiideeafki",
+      position: "top-10 right-20",
+    },
+    {
+      id: 3,
+      name: "prism.png",
+      icon: `${BASE_URL}images/image.png`,
+      kind: "file",
+      fileType: "img",
+      position: "top-52 right-80",
+      imageUrl: `${BASE_URL}images/image.png`,
+    },
+  ],
+},
   ],
 };
 
