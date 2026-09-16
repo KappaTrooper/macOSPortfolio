@@ -11,6 +11,8 @@ const Navbar = () => {
 
 const { openWindow } = useWindowStore();
 const [appearanceOpen, setAppearanceOpen] = useState(false);
+const resumeLink = navLinks.find(({ type }) => type === "resume");
+const otherLinks = navLinks.filter(({ type }) => type !== "resume");
 
 
   return (
@@ -20,13 +22,19 @@ const [appearanceOpen, setAppearanceOpen] = useState(false);
             <p className="font-bold text-text-primary"> Ajays's Portfolio</p>
 
             <ul>
-                {navLinks.map(({ id, name, type }) => (
+                {otherLinks.map(({ id, name, type }) => (
                     <li key={id} onClick={() => openWindow(type)}>
                         <p>{name}</p>
                     </li>
 
                 ))}
             </ul>
+
+            {resumeLink && (
+                <p className="resume-link" onClick={() => openWindow(resumeLink.type)}>
+                    {resumeLink.name}
+                </p>
+            )}
         </div>
 
             <div>

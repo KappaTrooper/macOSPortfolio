@@ -93,6 +93,10 @@ body {
       }
     }
 
+    .resume-link {
+      @apply text-sm cursor-pointer hover:underline transition-all text-text-primary shrink-0;
+    }
+
     time {
       @apply text-sm font-medium text-text-primary;
     }
@@ -374,7 +378,7 @@ body {
   }
 
   #photos {
-    @apply w-3xl absolute top-96 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:top-1/2;
+    @apply w-3xl max-h-[85vh] absolute top-96 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-xl:w-[90vw] max-xl:max-w-3xl max-xl:top-1/2;
 
     .sidebar {
       @apply w-3/12 flex-none bg-surface-secondary border-r border-border flex flex-col p-5 max-sm:w-16 max-sm:items-center max-sm:p-2;
@@ -407,7 +411,7 @@ body {
     }
 
     .gallery {
-      @apply p-5 max-sm:p-3;
+      @apply p-5 max-sm:p-3 max-h-[70vh] overflow-y-auto;
 
       ul {
         @apply grid grid-cols-5 grid-rows-5 gap-2.5 h-96
