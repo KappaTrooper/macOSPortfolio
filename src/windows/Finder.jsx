@@ -5,12 +5,18 @@ import useLocationStore from "#store/location"
 import useWindowStore from "#store/window"
 import clsx from "clsx"
 import { Search } from "lucide-react"
+import { useEffect } from "react"
 
 const Finder = () => {
 
     const {openWindow} = useWindowStore();
+    const isOpen = useWindowStore((s) => s.windows.finder.isOpen);
 
-    const { activeLocation, setActiveLocation } = useLocationStore();
+    const { activeLocation, setActiveLocation, resetActiveLocation } = useLocationStore();
+
+    useEffect(() => {
+        if (!isOpen) resetActiveLocation();
+    }, [isOpen, resetActiveLocation]);
 
     const openItem = (item) => {
         if (item.fileType === "pdf") return openWindow("resume");

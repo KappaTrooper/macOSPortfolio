@@ -508,10 +508,10 @@ body {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl max-xl:w-[94vw] max-xl:max-w-3xl max-xl:left-[3vw] max-xl:top-12;
+    @apply absolute w-3xl max-h-[85vh] left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl max-xl:w-[94vw] max-xl:max-w-3xl max-xl:left-[3vw] max-xl:top-12;
 
     .sidebar {
-      @apply w-48 bg-surface-secondary border-r border-border flex flex-col p-5 space-y-3 max-xl:w-32 max-sm:w-16 max-sm:items-center max-sm:p-2;
+      @apply w-48 max-h-[85vh] overflow-y-auto bg-surface-secondary border-r border-border flex flex-col p-5 space-y-3 max-xl:w-32 max-sm:w-16 max-sm:items-center max-sm:p-2;
 
       h3 {
         @apply text-xs font-medium text-text-tertiary mb-1 max-sm:hidden;
@@ -540,7 +540,7 @@ body {
 
     .content {
       @apply flex-1 p-8 bg-surface text-text-primary max-w-2xl grid content-start
-             gap-x-6 gap-y-8 grid-cols-4 max-h-96 overflow-y-auto
+             gap-x-6 gap-y-8 grid-cols-4 max-h-[65vh] overflow-y-auto
              max-xl:grid-cols-3 max-sm:!max-w-none max-sm:!grid-cols-2 max-sm:gap-6 max-sm:p-4;
 
       li {

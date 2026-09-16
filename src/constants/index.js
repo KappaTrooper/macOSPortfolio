@@ -203,6 +203,13 @@ const WORK_LOCATION = {
   icon: `${BASE_URL}icons/work.svg`,
   kind: "folder",
   children: [
+    {
+      id: 16,
+      name: "Websites",
+      icon: `${BASE_URL}images/folder.png`,
+      kind: "folder",
+      windowPosition: "top-[5vh] left-5",
+      children: [
     // ▶ Project 1
   {
   id: 1,
@@ -622,7 +629,15 @@ const WORK_LOCATION = {
     },
   ],
 },
-
+      ],
+    },
+    {
+      id: 17,
+      name: "Videos",
+      icon: `${BASE_URL}images/folder.png`,
+      kind: "folder",
+      windowPosition: "top-[5vh] left-5",
+      children: [
 // ▶ Project 11
 {
   id: 15,
@@ -661,6 +676,8 @@ const WORK_LOCATION = {
     },
   ],
 },
+      ],
+    },
   ],
 };
 
